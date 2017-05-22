@@ -6,10 +6,11 @@
 class Control {
 public:
 	int total;
-	const int max = 8;
+	const int max;
 	Phonebook people[8]; 
 	Control();
-	std::string setColumns();
+	//Control(const Control& orig);
+	void setColumns();
 	std::string addNewContact();
 	std::string getPos(int);
 	

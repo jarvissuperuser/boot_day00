@@ -13,14 +13,18 @@
 #include <iostream>
 #include <string>
 #include "phonebook.hpp"
+#include "control.hpp"
 
 int main(void){
 	std::string input = "";
+	Control	con;
 	while(true){
 		std::cout<<"Welcome to Phone Book\n";
 		std::cout<<"Commands:- ADD, SEARCH or EXIT\n";
 		std::cin>>input;
-		getchar();
+		if (input.compare("SEARCH") == 0)
+			con.setColumns();
+		//getchar();
 		if (input.compare("EXIT") == 0)
 			break ;
 	}

@@ -1,7 +1,8 @@
 
 #include <stdlib.h>
-
 #include "control.hpp"
+
+const int Control::max = 8;
 
 Control::Control() {
 	for (int a = 0;a < this->max;a++){
@@ -9,8 +10,10 @@ Control::Control() {
 	}
 }
 
-std::string Control::setColumns(){
-	
+void Control::setColumns(){
+	std::cout<<"_____________________________________________";
+	std::cout<<"|  index   |first name| last name| nick name|";
+	std::cout<<"---------------------------------------------";
 }
 
 std::string Control::addNewContact(){
