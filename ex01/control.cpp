@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "control.hpp"
 
 Control::Control() {
@@ -40,13 +42,16 @@ std::string Control::addNewContact(){
 		while (1){
 			std::cout<<"Phone Book is full.\n Enter Contact index to replace:- ";
 			std::getline(std::cin,input);
-			pos = std::stoi(input);
-			if (pos > 0 && pos < 9)
-			{
-				break;
+			try{
+				pos = std::stoi(input);
+				if (pos > 0 && pos < 9)
+				{
+					break;
+				}
+				else 
+					std::cout<<"And that was not an index in the number...\n";
+			}catch(...){
 			}
-			else 
-				std::cout<<"And that was not an index in the number...\n";
 		}
 		if (pos > 0)
 			this->setContact(pos - 1);
