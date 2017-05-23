@@ -44,7 +44,6 @@ void Control::setColumns() {
 	try {
 		pos = std::stoi(input);
 		if (pos > 0 && pos < 9) {
-			break;
 			std::cout << calColWidth(std::to_string(pos));
 			std::cout << calColWidth(people[pos-1].first_name);
 			std::cout << calColWidth(people[pos-1].last_name);
