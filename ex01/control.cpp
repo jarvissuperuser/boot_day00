@@ -43,7 +43,7 @@ void Control::setColumns() {
 	std::getline(std::cin, input);
 	try {
 		pos = std::stoi(input);
-		if (pos > 0 && pos < 9) {
+		if (pos > 0 && pos < (total+1)) {
 			std::cout << calColWidth(std::to_string(pos));
 			std::cout << calColWidth(people[pos-1].first_name);
 			std::cout << calColWidth(people[pos-1].last_name);
