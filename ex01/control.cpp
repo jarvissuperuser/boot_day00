@@ -16,7 +16,8 @@ std::string Control::toUpper(std::string str){
 }
 
 void Control::setColumns(){
-	std::cout<<"_____________________________________________\n";
+	system("clear");
+	std::cout<<"---------------------------------------------\n";
 	std::cout<<"|  index   |first name| last name| nick name|\n";
 	std::cout<<"---------------------------------------------\n";
 	for (int a = 0; a < total; a++){
@@ -26,6 +27,7 @@ void Control::setColumns(){
 		std::cout<<calColWidth(people[a].nick_name);
 		std::cout<<"|\n";
 	}
+	std::cout<<"---------------------------------------------\n";
 };
 
 std::string Control::addNewContact(){
