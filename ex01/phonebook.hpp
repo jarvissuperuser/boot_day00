@@ -1,6 +1,6 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
-
+#include <iostream>
 class Phonebook {
 public:
     std::string first_name;
@@ -15,8 +15,9 @@ public:
 	std::string underwear_color;
 	std::string darkest_secret;
 	Phonebook();
-	Phonebook(const Phonebook& orig);
+	Phonebook(const Phonebook& b);
 	~Phonebook();
+	Phonebook operator=(const Phonebook& b);
 private:
 
 };
