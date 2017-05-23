@@ -4,10 +4,7 @@
 
 Control::Control() {
 	this->total = 0;
-	for (int a = 0;a < MAXC;a++){
-		this->people[a].nick_name = "";
-	}
-};
+}
 
 std::string Control::toUpper(std::string str){
 	std::string returned = "";
@@ -57,11 +54,11 @@ std::string Control::addNewContact(){
 			this->setContact(pos - 1);
 	}
 	return "Done\n";
-};
+}
 
 Phonebook Control::getPos(int i){
 	return this->people[i];
-};
+}
 
 std::string Control::calColWidth(std::string var){
 	int size;
@@ -98,7 +95,7 @@ std::string Control::adjustWidth(std::string var){
 	if (fin.length()<10)
 		fin.append(" ");
 	return fin;
-};
+}
 
 void Control::setContact(int tot){
 	std::cout<<"Please enter the contact's name...";
@@ -123,5 +120,5 @@ void Control::setContact(int tot){
 	std::getline(std::cin,this->people[tot].postal_address);
 	std::cout<<"Please enter the contact's underwear color...";
 	std::getline(std::cin,this->people[tot].underwear_color);
-};
+}
 
