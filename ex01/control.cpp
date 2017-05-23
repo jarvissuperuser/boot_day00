@@ -38,7 +38,7 @@ std::string Control::addNewContact(){
 		total++;	
 	}else{
 		while (1){
-			std::cout<<"Phone Book is full Enter Contact index to replace:- ";
+			std::cout<<"Phone Book is full.\n Enter Contact index to replace:- ";
 			std::getline(std::cin,input);
 			pos = std::stoi(input);
 			if (pos > 0 && pos < 9)
