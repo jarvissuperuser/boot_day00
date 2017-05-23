@@ -3,7 +3,7 @@
 #include <iomanip>
 
 Phonebook::Phonebook() {
-};
+}
 
 Phonebook::Phonebook(const Phonebook& b) {
 	this->birthday_date = b.birthday_date;
